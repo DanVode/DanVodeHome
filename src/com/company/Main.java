@@ -47,7 +47,6 @@ public class Main {
             case '*' -> result = num1 * num2;
             case '/' -> result = num1 / num2;
             case '%' -> result = num1 % num2;
-            case '^' -> result = num1 ^ num2;
             default -> {
                 System.out.println("Такого значения нет.");
                 result = Counter(num1, num2, getOperation());
