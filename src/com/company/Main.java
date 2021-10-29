@@ -6,22 +6,22 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int num1 = getInt();
-        int num2 = getInt();
+        long num1 = getLong();
+        long num2 = getLong();
         char operation = getOperation();
-        int result = test2(num1,num2,operation);
+        long result = Counter(num1,num2,operation);
         System.out.println("Результат операции: "+result);
     }
 
-    public static int getInt(){
+    public static long getLong(){
         System.out.println("Введите число: ");
-        int num;
+        long num;
         if(scanner.hasNextInt()){
             num = scanner.nextInt();
         } else {
             System.out.println("Введите число");
             scanner.next();
-            num = getInt();
+            num = getLong();
         }
         return num;
     }
@@ -39,17 +39,18 @@ public class Main {
         return operation;
     }
 
-    public static int test2(int num1, int num2, char operation){
-        int result;
+    public static long Counter(long num1, long num2, char operation){
+        long result;
         switch (operation) {
             case '+' -> result = num1 + num2;
             case '-' -> result = num1 - num2;
             case '*' -> result = num1 * num2;
             case '/' -> result = num1 / num2;
             case '%' -> result = num1 % num2;
+            case '^' -> result = num1 ^ num2;
             default -> {
                 System.out.println("Такого значения нет.");
-                result = test2(num1, num2, getOperation());
+                result = Counter(num1, num2, getOperation());
             }
         }
         return result;
