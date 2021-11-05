@@ -1,21 +1,24 @@
 package com.company;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
+
     static Scanner scanner = new Scanner(System.in);
 
+
     public static void main(String[] args) {
-        long num1 = getLong();
-        long num2 = getLong();
+        double num1 = getLong();
+        double num2 = getLong();
         char operation = getOperation();
-        long result = Counter(num1,num2,operation);
+        double result = Counter(num1,num2,operation);
         System.out.println("Результат операции: "+result);
     }
 
-    public static long getLong(){
+    public static double getLong(){
         System.out.println("Введите число: ");
-        long num;
+        double num;
         if(scanner.hasNextInt()){
             num = scanner.nextInt();
         } else {
@@ -39,8 +42,8 @@ public class Main {
         return operation;
     }
 
-    public static long Counter(long num1, long num2, char operation){
-        long result;
+    public static double Counter(double num1, double num2, char operation){
+        double result;
         switch (operation) {
             case '+' -> result = num1 + num2;
             case '-' -> result = num1 - num2;
