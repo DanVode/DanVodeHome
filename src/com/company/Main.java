@@ -1,31 +1,22 @@
 package com.company;
 
-
-public  class Main implements Plant{
-
-    public Plant plant;
+class Car {}
+class Main {
 
     public static void main(String[] args) {
-        Nissan nissan = new Nissan();
-        nissan.sedan();
-        Polo polo = new Polo();
-        polo.sUV();
-        Tahoe tahoe = new Tahoe();
-        tahoe.sedan();
-        Hyundai hyundai = new Hyundai();
-        hyundai.sUV();
-        System.out.println(hyundai);
-
-    }
-
-
-    @Override
-    public void sedan() {
-
-    }
-
-    @Override
-    public void sUV() {
-
+        Object mers = new Mersedes();
+        Object porsh = new Porsh();
+        if ( mers instanceof Vehicle ) {
+            System.out.println("Мерседес имплеметирует класс Движения");
+        }
+        if ( porsh instanceof Vehicle ) {
+            System.out.println("Порш имплеметирует класс Движения");
+        }
+        if ( mers instanceof  Car ) {
+            System.out.println("Мерседес это машина");
+        }
+        if ( porsh instanceof  Car ) {
+            System.out.println("Порш это машина");
+        }
     }
 }
