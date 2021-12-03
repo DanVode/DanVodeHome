@@ -1,5 +1,5 @@
 package com.company;
 
-class Porsh extends Car implements Vehicle {
+class Porsh extends Car implements Auto {
 
 }

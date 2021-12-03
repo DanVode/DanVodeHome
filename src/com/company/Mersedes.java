@@ -1,6 +1,6 @@
 package com.company;
 
-class Mersedes extends Car implements Vehicle {
+class Mercedess extends Car implements Auto {
 
 }
 

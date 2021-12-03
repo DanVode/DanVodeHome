@@ -1,15 +1,20 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Car {}
 class Main {
 
     public static void main(String[] args) {
-        Object mers = new Mersedes();
-        Object porsh = new Porsh();
-        if ( mers instanceof Vehicle ) {
+
+        List list = new ArrayList();
+        Auto mers = new Mercedess();
+        Auto porsh = new Porsh();
+        if ( mers instanceof Auto) {
             System.out.println("Мерседес имплеметирует класс Движения");
         }
-        if ( porsh instanceof Vehicle ) {
+        if ( porsh instanceof Auto) {
             System.out.println("Порш имплеметирует класс Движения");
         }
         if ( mers instanceof  Car ) {
