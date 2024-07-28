@@ -2,26 +2,28 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Calculator {
+import java.util.Scanner;
+
+public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int num1 = getInt();
-        int num2 = getInt();
+        float num1 = getFloat();
+        float num2 = getFloat();
         char operation = getOperation();
-        int result = calc(num1,num2,operation);
+        float result = calc(num1,num2,operation);
         System.out.println("Результат операции: "+result);
     }
 
-    public static int getInt(){
+    public static float getFloat(){
         System.out.println("Введите число:");
-        int num;
-        if(scanner.hasNextInt()){
-            num = scanner.nextInt();
+        float num;
+        if(scanner.hasNextFloat()){
+            num = scanner.nextFloat();
         } else {
             System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
             scanner.next();
-            num = getInt();
+            num = getFloat();
         }
         return num;
     }
@@ -39,8 +41,8 @@ public class Calculator {
         return operation;
     }
 
-    public static int calc(int num1, int num2, char operation){
-        int result;
+    public static float calc(float num1, float num2, char operation){
+        float result;
         switch (operation){
             case '+':
                 result = num1+num2;
@@ -53,6 +55,9 @@ public class Calculator {
                 break;
             case '/':
                 result = num1/num2;
+                break;
+            case '%':
+                result = num1%num2;
                 break;
             default:
                 System.out.println("Операция не распознана. Повторите ввод.");
